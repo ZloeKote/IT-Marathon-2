@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Queue</title>
+<link rel="stylesheet" href="../css/styleQueue.css">
+</head>
+<body>
+ <header class="header">
+        <nav class="nav-bar">
+            <div class="nav-bar-wrapper">
+                <div class="nav-logo-wrapper">
+                    <a href="#" class="nav-link"><i class="nav-logo"></i></a>
+                    <a href="/wep-app" class="nav-link"><span class="nav-title">CatGames</span></a>
+                </div>
+                <div class="nav-menu-wrapper">
+                    <a href="./queue" class="nav-link"><span class="nav-menu-item">Черга</span></a>
+                    <a href="./operatormenu" class="nav-link"><span class="nav-menu-item">Меню оператора</span></a>
+                    <a href="./adminmenu" class="nav-link"><span class="nav-menu-item">Адмін</span></a>
+                </div>
+                <div class="menu-markup">
+                    <div class="menu-button-wrapper">
+                        <div class="menu-button"></div>
+                    </div>
+                    <div class="opened-menu">
+                        <a href="#" class="opened-menu-link"><span class="opened-menu-item">Черга</span></a>
+                        <a href="#" class="opened-menu-link"><span class="opened-menu-item">Меню оператора</span></a>
+                        <a href="#" class="opened-menu-link"><span class="opened-menu-item">Адмін</span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<div class="tickets-title"><h1>ВСІ ЗАЯВКИ</h1></div>
+<div class = "search-form">
+    <div class = "search-find">
+        <div class="search-title"><span>Знайти</span></div>
+        <form method = "post" >
+            <label>Користувач</label>
+            <div class="search-button">
+                <input type = "text" name = "search-user-email" placeholder = "Пошта...">
+                <button type = "submit" name = "search-button" value = "search_by_email"><img src = "../img/search.png "class = "search-img"></button>
+            </div>
+        </form>
+        <form method = "post">
+            <label>Оператор</label>
+            <div class="search-button">
+                <input type = "text" name = "search-handler-email" placeholder = "Пошта...">
+                <button type = "submit" name = "search-button" value = "search_by_email"><img src = "../img/search.png "class = "search-img"></button>
+            </div>
+        </form>
+    </div>
+    <div class = "search-sort">
+        <div class="status-button">
+            <span>Показати</span>
+            <form method = "post" ><button value = "NEW">NEW</button></form>
+            <form method = "post"><button value = "INPROGRESS">INPROGRESS</button></form>
+            <form method = "post"><button value = "CLOSED">CLOSED</button></form>
+        </div>
+    </div>
+</div>
+
+<div class="form-ticket">
+    <div class="form-new-ticket-wrapper">
+        <div class="ticket-column id-status">
+            <div class="id-column"><span>250</span></div>
+            <span>NEW</span>
+        </div>
+        <div class="ticket-column username">
+            <span>Ім'я користувача</span>
+            <span>ZloeKote</span>
+        </div>
+        <div class="ticket-column user-email">
+            <span>Пошта користувача</span>
+            <span>illia.kotenko@nure.ua</span>
+        </div>
+        <div class="ticket-column handler-name">
+            <span>Оператор</span>
+            <span>Allah Akbar</span>
+        </div>
+        <div class="ticket-column game">
+            <span>Гра</span>
+            <span>Brawlhalla</span>
+        </div>
+        <div class="ticket-column pet">
+            <span>Тваринка</span>
+            <span>Other</span>
+        </div>
+        
+    </div>
+</div>
+
+<div class="form-ticket">
+    <div class="form-inprogress-ticket-wrapper">
+        <div class="ticket-column id-status">
+            <div class="id-column"><span>250</span></div>
+            <span>INPROGRESS</span>
+        </div>
+        <div class="ticket-column username">
+            <span>Ім'я користувача</span>
+            <span>ZloeKote</span>
+        </div>
+        <div class="ticket-column user-email">
+            <span>Пошта користувача</span>
+            <span>illia.kotenko@nure.ua</span>
+        </div>
+        <div class="ticket-column handler-name">
+            <span>Оператор</span>
+            <span>Allah Akbar</span>
+        </div>
+        <div class="ticket-column game">
+            <span>Гра</span>
+            <span>Brawlhalla</span>
+        </div>
+        <div class="ticket-column pet">
+            <span>Тваринка</span>
+            <span>Other</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-ticket">
+    <div class="form-closed-ticket-wrapper">
+        <div class="ticket-column id-status">
+            <div class="id-column"><span>250</span></div>
+            <span>CLOSED</span>
+        </div>
+        <div class="ticket-column username">
+            <span>Ім'я користувача</span>
+            <span>ZloeKote</span>
+        </div>
+        <div class="ticket-column user-email">
+            <span>Пошта користувача</span>
+            <span>illia.kotenko@nure.ua</span>
+        </div>
+        <div class="ticket-column handler-name">
+            <span>Оператор</span>
+            <span>Allah Akbar</span>
+        </div>
+        <div class="ticket-column game">
+            <span>Гра</span>
+            <span>Brawlhalla</span>
+        </div>
+        <div class="ticket-column pet">
+            <span>Тваринка</span>
+            <span>Other</span>
+        </div>
+    </div>
+</div>
+
+<div class = "table-wrapper">    
+
+
+ </div>
+</body>
+</html>

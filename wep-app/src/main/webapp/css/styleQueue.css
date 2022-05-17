@@ -1,0 +1,376 @@
+@charset "UTF-8";
+
+:root {
+    --background-color-main: #605F5F;
+    --background-color-form: #2C2828;
+    --background-color-nav: rgba(44, 40, 40, 0.95);
+    --background-color-nav-hover: #605F5F;
+    --border-color-form: #ffff;
+    --footer-text-color: #ffff;
+    --under-logo-text-color: #ffff;
+    --nav-text-color: #ffff;
+    --nav-text-color-hover: #7c7c7c;
+    --form-text-color: #ffff;
+    --form-input-color: #2C2828;
+    --background-color-button: #78D578;
+    --background-color-button-hover: lightgreen;
+    --add-color-text: rgb(87, 186, 248);
+}
+
+body {
+    background-color: var(--background-color-main);
+    margin: 0;
+}
+
+.header {
+    color: var(--nav-text-color);
+    background-color: var(--background-color-nav);
+    border-bottom: 2px solid black;
+    box-shadow: 0 1px 5px 5px rgb(63, 63, 63);
+    height: 45px;
+}
+
+.nav-logo-wrapper {
+    position: relative;
+    padding-left: 100px;
+    padding-top: 5px;
+}
+
+.nav-logo-wrapper::before {
+    position: absolute;
+    content: "";
+    height: 33px;
+    border: 1px solid var(--nav-text-color);
+    left: 72px;
+}
+
+.nav-logo {
+    background-image: url('../img/logo_w1.png');
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    left: 5px;
+}
+
+.nav-title {
+    display: inline-block;
+    color: var(--nav-text-color);
+}
+
+.nav-title:hover {
+    color: var(--nav-text-color-hover);
+}
+
+.nav-menu-item {
+    color: var(--nav-text-color);
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-menu-item:hover {
+    color: var(--nav-text-color-hover);
+}
+
+.nav-bar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+    padding: 0 160px 10px 142px;
+}
+
+.menu-markup {
+    display: none;
+}
+
+.nav-menu-wrapper span {
+    padding-left: 47px;
+}
+
+.menu-button-wrapper {
+    position: relative;
+    top: 4px;
+    padding: 8px 0 4px 8px;
+    width: 32px;
+    height: 22px;
+}
+
+.menu-button-wrapper:hover {
+    cursor: pointer;
+}
+
+.menu-button {
+    margin-top: 8px;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    position: absolute;
+    background-color: var(--nav-text-color);
+    height: 3px;
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 400ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+.opened-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color-nav);
+    border: 2px solid black;
+    border-top: none;
+    border-right: none;
+    margin-top: 10px;
+    right: 0;
+    width: 150px;
+    height: 100px;
+}
+
+.opened-menu-item {
+    display: block;
+    height: 33px;
+    text-indent: 5px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    color: var(--nav-text-color);
+}
+
+.opened-menu-link {
+    text-decoration: none;
+}
+
+.opened-menu-item:hover {
+    background-color: var(--background-color-nav-hover);
+}
+
+.tickets-title {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    line-height: 40px;;
+}
+
+.table-wrapper {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form-new-ticket-wrapper {
+    display:flex;
+    border: 1px solid rgb(0, 38, 255);
+    background-color: rgb(34, 194, 34);
+    border-radius: 20px;
+    margin:20px 40px 0 40px;
+    height: 100px;
+    color: white;
+}
+
+.form-inprogress-ticket-wrapper {
+    display:flex;
+    border: 1px solid rgb(0, 38, 255);
+    background-color: rgb(250, 133, 87);
+    border-radius: 20px;
+    margin:20px 40px 0 40px;
+    height: 100px;
+    color: white;
+}
+
+.form-closed-ticket-wrapper {
+    display:flex;
+    border: 1px solid rgb(0, 38, 255);
+    background-color: rgb(240, 78, 78);
+    border-radius: 20px;
+    margin:20px 40px 0 40px;
+    height: 100px;
+    color: white;
+}
+
+.ticket-column {
+    display: flex;
+    flex-direction: column;
+    font-size: 33px;
+    border-right: 2px solid rgb(0, 38, 255);
+    height: 100px;
+}
+
+.id-column {
+    margin-top: 5px;
+}
+
+.id-status {
+    width: 240px;
+}
+
+.id-status span:last-of-type {
+    margin-top: 11px;
+    align-self: center;
+}
+
+.id-column span{
+    background-color: rgb(0, 38, 255);
+    border-radius: 20px 0 5px 0;
+    border: 5px solid rgb(0, 38, 255);
+}
+
+.ticket-column:not(.id-status) {
+    justify-content: center;
+}
+
+.username {
+    width: 340px;
+    text-align: center;
+}
+
+.user-email {
+    width: 440px;
+    text-align:center;
+}
+
+.handler-name {
+    width: 400px;
+    text-align:center;
+}
+
+.game {
+    width: 200px;
+    text-align: center;
+}
+
+.pet {
+    width: 200px;
+    text-align: center;
+    border-right: none;
+}
+
+.search-form {
+	display:flex;
+    border: 1px solid rgb(0, 38, 255);
+    background-color: #7c7c7c;
+    border-radius: 5px;
+    margin:20px 40px 0 40px;
+    height: 70px;
+    color: white;
+    justify-content: space-between;
+}
+
+.search-find {
+    display: flex;
+}
+
+.search-sort {
+    display: flex;
+}
+
+.search-form label {
+    font-size: 24px;
+}
+
+.search-form span {
+    align-self: center;
+    font-size: 36px;
+    margin-left: 10px;
+}
+
+.search-title {
+    display: flex;
+    background-color: rgb(0, 38, 255);
+    height: 70px;
+    width: 130px;
+}
+
+.search-form form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 20px;
+}
+
+.search-button {
+    height: 30px;
+}
+
+.search-button button {
+    position: relative;
+    top: 2px;
+    height: 25px;
+    width: 40px;
+    border-radius: 5px;;
+    border-width: 0;
+    background-color: #78D578;
+}
+
+.search-button button:hover {
+    background-color: #a4e7a4;
+}
+
+.search-form input {
+    position: relative;
+    bottom: 7px;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 0;
+    border-width: 0;
+}
+
+.search-img {
+	width: 25px;
+	height: 25px;
+}
+
+.status-button {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: end;
+}
+
+.status-button button {
+    height: 60px;
+    width: 140px;
+    border-radius: 20px;
+    border-width: 0;
+}
+
+.status-button button[value="NEW"] {
+    background-color: rgb(34, 194, 34);
+}
+
+.status-button button[value="NEW"]:hover {
+    background-color: rgb(107, 223, 107);
+}
+
+.status-button button[value="INPROGRESS"] {
+    background-color: rgb(250, 133, 87);
+}
+
+.status-button button[value="INPROGRESS"]:hover {
+    background-color: rgb(248, 159, 124);
+}
+
+.status-button button[value="CLOSED"] {
+    background-color: rgb(240, 78, 78);
+}
+
+.status-button button[value="CLOSED"]:hover {
+    background-color: rgb(252, 116, 116);
+}
